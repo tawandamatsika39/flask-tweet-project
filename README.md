@@ -1,8 +1,8 @@
-# franc-interview
+# Tweet UI - flask + backend
 
-### A Franc coding challenge.
+### Tweet UI - flask + backend
 
-# The Challange - A social media time line
+# A social media time line
 A timeline consists of all your tweets plus all the tweets of people you follow ordered chronologically.
 
 # Notes
