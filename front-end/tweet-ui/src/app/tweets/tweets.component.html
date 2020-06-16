@@ -1,0 +1,26 @@
+<div>
+  <div class="login">
+    <label><b>Login as :  </b> </label><br>
+    <select [(ngModel)]="activeUser">
+      <option *ngFor="let user of users" [value]="user">
+        {{user}}
+      </option>    
+  </select>
+  </div>
+
+<div class = "followers">
+  <span><b>Friends List : </b></span><br>
+  {{getFollowersList(activeUser)}}
+</div>
+
+<div class = "user-tweets" >
+  <span><b>Friends Tweets : </b></span>
+  <ul>
+    <li *ngFor="let tweet of getSortedFriendsPosts(getFollowersList(activeUser))">
+      @ {{ tweet.name }} <br>
+      Time: {{tweet.details.time}}<br>
+      Message: {{tweet.details.status}}<br>
+    </li>
+  </ul>
+</div>
+</div>
